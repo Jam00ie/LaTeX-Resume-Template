@@ -1,0 +1,258 @@
+\documentclass[11pt]{article}
+
+% PACKAGES --------------------------------------------------
+
+    % Customize page layout
+    \usepackage{geometry}
+
+    % Using system fonts
+    \usepackage{fontspec}
+
+    % Layout with zero \parindent, non-zero \parskip
+    \usepackage{parskip}
+
+    % Tabular environments with custom width
+    \usepackage{tabularx}
+
+    % Control layout of itemize, enumerate, description
+    \usepackage{enumitem}
+
+    % Hyperlinks
+    \usepackage{hyperref}
+
+    % For custom boxes around environments
+    \usepackage{mdframed}
+
+% SETTINGS --------------------------------------------------
+
+    % A4 paper size
+    \geometry{a4paper}
+
+    % Set equal 5in margins on all sides
+    \geometry{margin=0.5in}
+
+    % Set sans font to MuseoSans Family
+    \setsansfont{MuseoSans-300}[
+        ItalicFont = MuseoSans-300Italic,
+        BoldFont = MuseoSans-900
+    ]
+
+    % Keep same font for urls
+    \urlstyle{same}
+
+    % Define new environment "rsbox" surrounded by mdframed
+    \newmdenv[
+        linewidth = 1.5pt,
+        nobreak = false,
+        topline = false,
+        rightline = false,
+        leftline = false,
+        bottomline = false,
+        innerleftmargin = 0pt,
+        innerrightmargin = 0pt,
+        innertopmargin = 10pt,
+        innerbottommargin = 10pt,
+        frametitle = {},
+        frametitlefont = \sffamily\bfseries\large,
+        frametitlerule = true,
+        frametitlerulewidth = 1.5pt,
+        frametitleaboveskip = 0pt,
+        frametitlebelowskip = 5pt
+    ]{rsbox}
+
+\begin{document}
+
+\pagestyle{empty}
+\small\sffamily
+
+%% INFORMATION
+
+{\setlength{\tabcolsep}{0pt}
+\begin{tabular*}{\linewidth}[b]{l@{\extracolsep{\fill}}r}
+    {\huge\bfseries{JAMIE KANG}} & (123) 456--7890 \\
+    \url{https://www.linkedin.com/in/jamiemk/} & \url{email@domain} \\
+    \url{https://github.com/Jam00ie} & \\
+
+\end{tabular*} \\
+}
+\vspace{0.1in}
+
+%% SKILLS
+
+\begin{rsbox}[frametitle = {SKILLS}]
+
+    \begin{tabularx}{\textwidth}[t]{lX}
+        \textbf{Languages:} & 
+        C\#/C++, JavaScript, \textrm{\LaTeX{}}, MATLAB \\
+    \end{tabularx}
+
+    \begin{tabularx}{\textwidth}[t]{lX}
+        \textbf{Applications:} & 
+        VESTA, CrystalMaker, Onshape, SolveSpace, Abaqus, UniVert, Figma, Canva, 
+        VS Code, MS Word/Excel/PowerPoint, Krita \\
+    \end{tabularx}
+
+    \begin{tabularx}{\textwidth}[t]{lX}
+        \textbf{Laboratory:} & 
+        Centrifuge, spectrophotometer, 
+        gel electrophoresis, micropipettes \\
+    \end{tabularx}
+\end{rsbox}
+
+%% PROJECTS
+
+\begin{rsbox}[frametitle = {PROJECTS}]
+
+    \begin{tabularx}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+
+        \href{https://github.com/Jam00ie/UWaterloo-Projects-Archive/tree/474c4d49984786414025b5d5a73e20b6bfb8b8b1/BME281L\%20Mechanics\%20of\%20Deformable\%20Solids\%20Laboratory}
+        {\textbf{Analysis of Deformable Solids}}
+        & Waterloo, ON \\
+        \textit{Mechanics of Deformable Solids Laboratory} & \textit{Oct. 2022--Dec. 2022} \\
+        \multicolumn{2}{@{\hspace{0.1in}}X}{
+            \begin{minipage}[b]{\linewidth}
+                \vspace{5pt}
+                \begin{itemize}[nosep]
+                    \item[\bullet] 
+                    Used a CellScale with UniVert testing software to conduct three and four point bending analysis on the radius, ulna, and humerus of a chicken.
+                    \item[\bullet] 
+                    Used strain gauges in quarter-bridge configurations and a vernier caliper to investigate the material composition of three metal samples.
+                    \item[\bullet] 
+                    Simulated the stress from combined loading on a drill bit using Abaqus to conduct a finite element analysis.
+                \end{itemize}
+            \end{minipage}
+        } \\
+
+        & \\ % ----------------------------------------------------------------------------------------------------
+
+        \href{https://github.com/Jam00ie/UWaterloo-Projects/tree/2dd2a87bc9c8adef9dc10e97f4419dcea7e91ad4/WE-Accelerate-Program}
+        {\textbf{Modern Web Application Design}}
+        & Waterloo, ON \\
+        \textit{Waterloo Experience (WE) Accelerate Program --- Manulife} & \textit{May 2022--Jun. 2022} \\
+        \multicolumn{2}{@{\hspace{0.1in}}X}{
+            \begin{minipage}[b]{\linewidth}
+                \vspace{5pt}
+                \begin{itemize}[nosep]
+                    \item[\bullet] 
+                    Built a web application which displays data of professors in UWaterloo and provides 
+                    further information upon clicking using REST API and React.js\@.
+                \end{itemize}
+            \end{minipage}
+        } \\
+
+        & \\ % ----------------------------------------------------------------------------------------------------
+
+        \href{https://github.com/Jam00ie/UWaterloo-Projects/tree/2dd2a87bc9c8adef9dc10e97f4419dcea7e91ad4/BME161-Introduction-to-Biomedical-Design/Y.A.T.S.-Wheelchair-Design-Project}
+        {\textbf{Y.\@ A.\@ T.\@ S.\@ (You Are The Stick) Wheelchair}} 
+        & Waterloo, ON \\
+        \textit{Introduction to Biomedical Design} & \textit{Sep. 2021--Dec. 2021} \\
+        \multicolumn{2}{@{\hspace{0.1in}}X}{
+            \begin{minipage}[b]{\linewidth}
+                \vspace{5pt}
+                \begin{itemize}[nosep]
+                    \item[\bullet] 
+                    Designed a backrest-controlled wheelchair where upper body movement 
+                    replaces the joystick feature of standard motorized wheelchairs.
+                    \item[\bullet] 
+                    Followed an iterative design process and applied methods such as QFDs, Personas, 
+                    Morphological charts and engineering analysis.
+                \end{itemize}
+            \end{minipage}
+        } \\
+
+        & \\ % ----------------------------------------------------------------------------------------------------
+
+        \textbf{Other Projects} & \\
+        \textit{UWaterloo, online and at home} & \textit{2018--2022} \\
+        \multicolumn{2}{@{\hspace{0.1in}}X}{
+            \begin{minipage}[b]{\linewidth}
+                \vspace{5pt}
+                \begin{itemize}[nosep]
+                    \item[\bullet]
+                    \href{https://github.com/Jam00ie/UWaterloo-Projects-Archive/tree/474c4d49984786414025b5d5a73e20b6bfb8b8b1/BME121\%20Digital\%20Computation/Othello\%20Game\%20Project}
+                    {Coded the Othello board game in C\# using method functions, linked lists, etc\@.}
+                    \item[\bullet]
+                    Made 3D models of the following in Onshape:
+                    \href{https://github.com/Jam00ie/UWaterloo-Projects-Archive/tree/da8186059f988002c5a99e1a6974c17f41fdceaf/BME101L\%20Communications\%20in\%20Biomedical\%20Engineering\%20-\%20Visualization/Lorax\%20Bike\%20CAD}
+                    {Ted's one-wheeled bike from the movie ``The Lorax''},
+                    \href{https://github.com/Jam00ie/UWaterloo-Projects-Archive/tree/da8186059f988002c5a99e1a6974c17f41fdceaf/BME282\%20Materials\%20Science\%20for\%20Biomedical\%20Engineers/A1\%20-\%20Crystalline\%20Modelling\%20Software\%20Comparison}
+                    {the crystal structure of alpha cristobalite and graphite},
+                    \href{https://github.com/Jam00ie/UWaterloo-Projects-Archive/tree/da8186059f988002c5a99e1a6974c17f41fdceaf/BME101L\%20Communications\%20in\%20Biomedical\%20Engineering\%20-\%20Visualization/Wild\%20Rose\%20Puzzle}
+                    {a fit-together puzzle in the shape of a flower}.
+                    \item[\bullet]
+                    Designed and pitched a product to counter a selected natural disaster scenario
+                    and won first place in a competition at an engineering/entrepreneurship summer camp
+                    hosted in UWO\@.
+                \end{itemize}
+            \end{minipage}
+        } \\
+
+    \end{tabularx}
+
+\end{rsbox}
+
+%% WORK EXPERIENCE
+
+\begin{rsbox}[frametitle = {WORK EXPERIENCE}]
+    
+    \begin{tabularx}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+
+        \textbf{Project Developer} & Burlington, ON \\
+        \textit{Spero Careers Canada}    & \textit{Aug. 2022} \\
+        \multicolumn{2}{@{\hspace{0.1in}}X}{
+            \begin{minipage}[b]{\linewidth}
+                \vspace{5pt}
+                \begin{itemize}[nosep]
+                    \item[\bullet] 
+                    Advanced proficiency in Figma by designing for the mobile application \textit{NANAWorks}.
+                    \item[\bullet] 
+                    Designed and implemented front-end pages using Bubble.
+                \end{itemize}
+            \end{minipage}
+        } \\
+
+        & \\ % ----------------------------------------------------------------------------------------------------
+
+        \textbf{Secretary and Librarian} & London, ON                      \\
+        \textit{Veritas Education Canada}  & \textit{Sep. 2019--Aug. 2021} \\
+        \multicolumn{2}{@{\hspace{0.1in}}X}{
+            \begin{minipage}[b]{\linewidth}
+                \vspace{5pt}
+                \begin{itemize}[nosep]
+                    \item[\bullet] 
+                    Advanced data analysis and Excel skills by significantly reducing the number of lost library books 
+                    and unassigned homework using an organizational system.
+                \end{itemize}
+            \end{minipage}
+        } \\
+
+    \end{tabularx}
+
+\end{rsbox}
+
+%% EDUCATION
+
+\begin{rsbox}[frametitle = {EDUCATION}]
+    
+    \begin{tabularx}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+
+        \textbf{University of Waterloo} & Waterloo, ON \\
+        \textit{B.A.Sc., Biomedical Engineering} & \textit{Expected Apr. 2027} \\
+        \multicolumn{2}{@{\hspace{0.1in}}X}{
+            \begin{minipage}[b]{\linewidth}
+                \vspace{5pt}
+                \begin{itemize}[nosep]
+                    \item[\bullet] 
+                    Relevant courses: Materials Science, Mechanics of Deformable Solids, 
+                    Biology, Calculus 1--3, Statics, Dynamics, Chemistry, Data Structures \& Algorithms,
+                    Human Factors, Matrices \& Linear Systems.
+                \end{itemize}
+            \end{minipage}
+        } \\
+
+    \end{tabularx}
+
+\end{rsbox}
+
+\end{document}
+
